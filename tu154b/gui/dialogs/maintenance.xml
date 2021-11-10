@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>maintenance</name>
+  <layout>vbox</layout>
+
+  <nasal>
+    <open>
+      deicing_anim = func{
+        setprop("/sim/model/ground-services/de-ice-p", 0);
+        setprop("/sim/model/ground-services/de-ice-pp", 0);
+        interpolate ("/sim/model/ground-services/de-ice-pp", 90, 90);
+      }
+    </open>
+
+    <close>
+      <!-- Leave this empty or fix close/open on fork toggle first. -->
+    </close>
+  </nasal>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Tu-154B-2 Maintenance</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Landing Gear</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Gear Chocks</label>
+      <property>/sim/model/ground-services/chockss</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <group><layout>hbox</layout>
+      <text><label>(required for everything below)</label></text>
+    </group>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Passengers</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <text><label>Stairways</label></text>
+    <checkbox>
+      <halign>left</halign>
+      <label>Stairway 2L</label>
+      <property>/sim/model/ground-services/stairs</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Stairway Cover</label>
+      <property>/sim/model/ground-services/st-cover</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <text><label>Buses</label></text>
+    <checkbox>
+      <halign>left</halign>
+      <label>Bus Middle</label>
+      <property>/sim/model/ground-services/bus2</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Bus Front</label>
+      <property>/sim/model/ground-services/bus1</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Baggage</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Front Baggage Ramp</label>
+      <property>/sim/model/ground-services/f-buggage</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Rear Baggage Ramp</label>
+      <property>/sim/model/ground-services/r-buggage</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Catering</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>Catering Truck</label>
+      <property>/sim/model/ground-services/catering</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Connect Catering</label>
+      <property>/sim/model/ground-services/cat-up</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>De-Icing</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>De-Icing Truck</label>
+      <property>/sim/model/ground-services/de-ice</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <button>
+      <legend>De-Ice Aircraft</legend>
+      <pref-width>120</pref-width>
+      <binding>
+        <command>nasal</command>
+        <script>deicing_anim()</script>
+      </binding>
+    </button>
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Electrical Power</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>External Power Unit (RAP)</label>
+      <property>/sim/model/ground-services/ext-power</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <!--<checkbox>
+      <halign>left</halign>
+      <label>External Power Connect</label>
+      <property>/sim/model/ground-services/ep-connect</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>-->
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Fuel</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+
+    <!--<checkbox>
+      <halign>left</halign>
+      <label>Fuel Truck Left</label>
+      <property>/sim/model/ground-services/fuel-l</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>-->
+    <checkbox>
+      <halign>left</halign>
+      <label>Fuel Truck</label>
+      <property>/sim/model/ground-services/fuel-r</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    <checkbox>
+      <halign>left</halign>
+      <label>Fuel Truck Connect</label>
+      <property>/sim/model/ground-services/f-connect-r</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+    
+  </group> </PropertyList> 

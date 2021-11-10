@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<tu154>
+		<livery>
+			<maina>
+				<name type="string">White Russian</name>
+				<texture>Liveries/WhiteRussian/maina_t.png</texture>
+			</maina>
+			<mainb>
+				<texture>Liveries/WhiteRussian/mainb_t.png</texture>
+			</mainb>
+			<var>
+				<texture>Liveries/WhiteRussian/var_t.png</texture>
+			</var>
+			<wingl>
+				<texture>Liveries/WhiteRussian/wingl_t.png</texture>
+			</wingl>
+			<wingr>
+				<texture>Liveries/WhiteRussian/wingr_t.png</texture>
+			</wingr>
+		</livery>
+	</tu154>
+</PropertyList>

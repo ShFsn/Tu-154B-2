@@ -1,0 +1,23 @@
+<!-- Airbus A320 Misc Systems -->
+
+<!-- Copyright (c) 2020 Jonathan Redpath -->
+
+<system name="Tu-154B-2: MISC">
+
+	<channel name="Shake" execrate="8">
+		
+		<switch name="/systems/shake/effect">
+			<default value="0"/>
+			<test logic="AND" value="1">
+				/velocities/groundspeed-kt ge 15
+				<test logic="OR">
+					/gear/gear[0]/compression-norm gt 0
+					/gear/gear[1]/compression-norm gt 0
+					/gear/gear[2]/compression-norm gt 0
+				</test>
+			</test>
+		</switch>
+		
+	</channel>
+	
+</system>

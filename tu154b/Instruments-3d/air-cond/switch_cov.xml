@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <params>
+    <switch/>
+    <cover/>
+    <model/>
+  </params>
+  <path alias="../params/model"/>
+<!--External panel lighting-->
+  <animation>
+    <type>material</type>
+    <!--<object-name>base</object-name>-->
+    <object-name>handle</object-name>
+    <object-name>cover_up</object-name>
+    <object-name>cover_down</object-name>
+    <emission>
+      <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+      <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+      <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+    </emission>
+  </animation>
+
+    
+  <animation>
+    <type>rotate</type>
+    <object-name>handle</object-name>
+    <property alias="../../params/switch"/>
+    <factor>-120</factor>
+    <offset-deg>60</offset-deg>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cover</object-name>
+    <property alias="../../params/cover"/>
+    <factor>150</factor>
+    <offset-deg>10</offset-deg>
+    <center>
+      <x-m>0.00378</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.01429</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+
+  <!--Control-->
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_1</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_2</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>cover_up</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/cover"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>cover_down</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/cover"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

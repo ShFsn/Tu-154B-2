@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Handle type 1
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>handle2.ac</path>
+<!--External panel lighting-->
+<animation>
+  <type>material</type>
+  <object-name>handle</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+  </emission>
+</animation>
+
+
+<animation>
+  <type>knob</type>
+  <object-name>handle</object-name>
+  <!--<property>/tu154/air-cond/sel-trub</property>-->
+  <property alias="../../params/handle"/>
+  <interpolation>
+    <entry><ind>  0.0</ind> <dep> -90.0</dep></entry>
+    <entry><ind>  5.0</ind> <dep> 60.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1</x>
+    <y>0</y>
+    <z>0</z>
+  </axis>
+  <action>
+    <binding>
+      <command>property-adjust</command>
+      <!--<property>/tu154/air-cond/sel-trub</property>-->
+      <property alias="../../../../params/handle"/>
+      <factor>1</factor>
+      <min>0</min>
+      <max>5</max>                
+      <wrap>false</wrap>
+    </binding>    
+  </action>
+</animation>
+
+
+</PropertyList>

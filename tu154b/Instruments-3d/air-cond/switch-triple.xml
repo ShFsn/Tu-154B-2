@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <path>switch-triple.ac</path>
+  <params>
+    <switch-aut/>
+    <switch-hol/>
+    <switch-gor/>
+  </params>
+
+<!-- Internal instruments lighting -->
+  <animation>
+    <type>material</type>
+    <object-name>handle</object-name>
+    <emission>
+      <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+      <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+      <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>handle</object-name>
+    <property alias="../../params/switch-aut"/>
+    <interpolation>
+      <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+      <entry><ind>  1.0</ind> <dep> 60.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>handle</object-name>
+    <property alias="../../params/switch-hol"/>
+    <interpolation>
+      <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+      <entry><ind>  1.0</ind> <dep> 60.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>-1.0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>handle</object-name>
+    <property alias="../../params/switch-gor"/>
+    <interpolation>
+      <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+      <entry><ind>  1.0</ind> <dep> 60.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_aut</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-aut"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-hol"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-gor"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_hol</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-aut"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-hol"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-gor"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-aut"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-hol"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-gor"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_gor</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-aut"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-hol"/>
+        <value>0</value>
+        <time>0.0</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-gor"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-aut"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-hol"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property alias="../../../../../params/switch-gor"/>
+          <value>0</value>
+          <time>0.1</time>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>base_hs_10</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-aut"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-hol"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch-gor"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+
+  <!--<animation>
+    <type>rotate</type>
+    <object-name>handle</object-name>
+    <property alias="../../params/switch"/>
+    <factor>-120</factor>
+    <offset-deg>60</offset-deg>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_1</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch"/>
+        <value>1</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>
+  <animation>
+    <type>pick</type>
+    <object-name>hotspot_2</object-name>
+    <visible>false</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-interpolate</command>
+        <property alias="../../../../params/switch"/>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </action>
+  </animation>-->
+</PropertyList>

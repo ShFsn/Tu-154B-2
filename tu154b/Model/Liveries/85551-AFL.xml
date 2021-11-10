@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<tu154>
+   <livery>
+      <maina>
+        <name type="string">85551-Aeroflot Nord</name>
+        <texture>Liveries/85551/maina_t.png</texture>
+      </maina>
+      <mainb>
+        <texture>Liveries/85551/mainb_t.png</texture>
+      </mainb>
+      <var>
+        <texture>Liveries/85551/var_t.png</texture>
+      </var>
+      <wingl>
+        <texture>Liveries/85551/wingl_t.png</texture>
+      </wingl>
+      <wingr>
+        <texture>Liveries/85551/wingr_t.png</texture>
+      </wingr>
+   </livery>
+ </tu154>
+ 
+</PropertyList>

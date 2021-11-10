@@ -1,0 +1,12 @@
+<PropertyList>
+    <name>logo</name>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <parameters>
+        <lightmap-enabled type="int">1</lightmap-enabled>
+        <lightmap-factor type="float" n="0"><use>/sim/model/external-lighting/headlight</use></lightmap-factor>
+        <lightmap-color type="vec3d" n="0">1.0 1.0 1.0</lightmap-color>
+        <texture n="3">
+            <image>Aircraft/tu154b/Model/Effects/lights.png</image>
+        </texture>
+    </parameters>
+</PropertyList>

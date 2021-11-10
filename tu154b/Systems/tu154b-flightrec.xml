@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+ <replay-config type="int">0</replay-config>
+ <config n="0">
+  <name type="string">Tu-154B-2 flight recorder</name>
+  <signals include="flightrecorder/tu154b-animations.xml"/>
+  <signals include="flightrecorder/tu154b-movement.xml"/>
+ </config>
+</PropertyList>

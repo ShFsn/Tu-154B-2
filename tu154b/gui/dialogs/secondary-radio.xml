@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>sec-radio</name>
+  <layout>vbox</layout>
+
+  <nasal>
+    <open>
+      source_switch = func{
+        if (getprop("/tu154/instrumentation/spu-7/source-sec") == 0) {
+          setprop("/tu154/instrumentation/spu-7/source-sec", 1);
+          setprop("/tu154/instrumentation/spu-7/ind-1", 0);
+          setprop("/tu154/instrumentation/spu-7/ind-2", 1);
+        }
+        else if (getprop("/tu154/instrumentation/spu-7/source-sec") == 1) {
+          setprop("/tu154/instrumentation/spu-7/source-sec", 0);
+          setprop("/tu154/instrumentation/spu-7/ind-1", 1);
+          setprop("/tu154/instrumentation/spu-7/ind-2", 0);
+        }
+      }
+    </open>
+
+    <close>
+      <!-- Leave this empty or fix close/open on fork toggle first. -->
+    </close>
+  </nasal>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Secondary Radio Source</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+
+
+
+    <!--<group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>De-Icing</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>-->
+
+    <checkbox>
+      <halign>left</halign>
+      <label> On / Off</label>
+      <property>/tu154/instrumentation/spu-7/power-sec</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <hrule>
+      <stretch type="bool">true</stretch>
+    </hrule>
+
+    <group><layout>hbox</layout>
+      <text><label>VHF 1 </label></text>
+      <radio>
+        <property>/tu154/instrumentation/spu-7/ind-1</property>
+        <live>true</live>
+        <!--<binding><command>dialog-apply</command></binding>-->
+      </radio>
+      <text><label>  </label></text>
+      <radio>
+        <property>/tu154/instrumentation/spu-7/ind-2</property>
+        <live>true</live>
+        <!--<binding><command>dialog-apply</command></binding>-->
+      </radio>
+      <text><label> VHF 2</label></text>
+    </group>
+
+    <button>
+      <legend>Switch</legend>
+      <pref-width>120</pref-width>
+      <binding>
+        <command>nasal</command>
+        <script>source_switch()</script>
+      </binding>
+    </button>
+    
+  </group> </PropertyList> 

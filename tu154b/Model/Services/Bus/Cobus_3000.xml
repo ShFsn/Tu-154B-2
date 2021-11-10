@@ -1,0 +1,35 @@
+<PropertyList>
+	<path>Cobus_3000.ac</path>
+    
+	<animation>
+		<type>select</type>
+        <object-name>blah</object-name>
+        <object-name>Cobus_3000</object-name>
+        <object-name>Cobus_3000_Light</object-name>
+		<condition>
+            <property>sim/model/ground-services/bus2</property>
+		</condition>
+	</animation>
+
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Cobus_3000_Light</object-name>
+ </effect>
+
+<animation>
+<type>material</type>
+	<object-name>Cobus_3000_Light</object-name>
+<condition>		
+<greater-than>		
+	<property>/sim/time/sun-angle-rad</property>
+	<value>1.47</value>
+</greater-than>
+</condition>
+<emission>	
+	<red>0.6</red>	
+	<green>0.6</green>	
+	<blue>0.6</blue>
+</emission>
+</animation>
+
+</PropertyList>

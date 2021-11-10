@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- APU turn indicator ITE
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>press.ac</path>
+ <params>
+  <param/>
+ </params>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+  </emission>
+</animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property alias="../../params/param"/>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-159.5</dep></entry>
+      <entry><ind>  2.0</ind> <dep> -154.5</dep></entry>
+      <entry><ind>  3.0</ind> <dep> -146.0</dep></entry>
+      <entry><ind>  4.0</ind> <dep> -136.0</dep></entry>
+      <entry><ind>  4.5</ind> <dep> -130.0</dep></entry>
+      <entry><ind>  5.0</ind> <dep> -122.0</dep></entry>
+      <entry><ind>  5.5</ind> <dep> -116.0</dep></entry>
+      <entry><ind>  6.0</ind> <dep> -107.0</dep></entry>
+      <entry><ind>  7.0</ind> <dep> -90.5</dep></entry>
+      <entry><ind>  8.0</ind> <dep> -70.0</dep></entry>
+      <entry><ind>  9.0</ind> <dep> -45.0</dep></entry>
+      <entry><ind>  10.0</ind> <dep> -16.0</dep></entry>
+      <entry><ind>  11.0</ind> <dep> 18.0</dep></entry>
+      <entry><ind>  12.0</ind> <dep> 48.5</dep></entry>
+      <entry><ind>  13.0</ind> <dep> 85.0</dep></entry>
+      <entry><ind>  14.0</ind> <dep> 120.0</dep></entry>
+      <entry><ind>	15.0</ind>	<dep>	159.5</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+
+</PropertyList>

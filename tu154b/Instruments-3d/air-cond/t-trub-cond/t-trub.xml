@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <path>t-trub.ac</path>
+<params>
+  <param/>
+</params>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+  </emission>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+  </emission>
+</animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property alias="../../params/param"/>
+    <interpolation>
+      <entry><ind>	-70.0</ind>	<dep>	-62.0</dep></entry>
+      <entry><ind>  -60.0</ind>  <dep> -58.5</dep></entry>
+      <entry><ind>  -50.0</ind>  <dep> -55.0</dep></entry>
+      <entry><ind>  -40.0</ind>  <dep> -50.5</dep></entry>
+      <entry><ind>  0.0</ind>  <dep> -26.0</dep></entry>
+      <entry><ind>  50.0</ind>  <dep> 5.0</dep></entry>
+      <entry><ind>  100.0</ind>  <dep> 34.0</dep></entry>
+      <entry><ind>  140.0</ind>  <dep> 53.5</dep></entry>
+      <entry><ind>	150.0</ind>	<dep>	57.0</dep></entry>
+    </interpolation>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>-0.011849</z-m>
+  </center>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+
+
+</PropertyList>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+
+
+ <signal><property type="string">/sim/model/eng-doors/rotate1</property><type>float</type></signal>
+ <signal><property type="string">/sim/model/eng-doors/rotate3</property><type>float</type></signal>
+
+ <signal><property type="string">/sim/model/rev-flaps/rev-flaps1</property><type>float</type></signal>
+ <signal><property type="string">/sim/model/rev-flaps/rev-flaps3</property><type>float</type></signal>
+
+ <signal><property type="string">/sim/model/cabin-lighting/vnesh</property><type>double</type></signal>
+ <signal><property type="string">/sim/model/cabin-lighting/vnesh-2</property><type>double</type></signal>
+ <signal><property type="string">/sim/model/cabin-lighting/lamps</property><type>double</type></signal>
+ <signal><property type="string">/sim/model/cabin-lighting/lamps-2</property><type>double</type></signal>
+ <signal><property type="string">/sim/model/cabin-lighting/prib</property><type>double</type></signal>
+ <signal><property type="string">/sim/model/cabin-lighting/prib-2</property><type>double</type></signal>
+
+ <signal><property type="string">/sim/model/nav-display/show</property><type>bool</type></signal>
+
+ <signal><property type="string">/sim/model/ground-services/stairs</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/st-cover</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/bus1</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/bus2</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/f-buggage</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/r-buggage</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/chocks</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/chockss</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/de-ice</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/de-ice-p</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/catering</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/cat-up</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/ext-power</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/ep-connect</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/fuel-l</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/fuel-r</property><type>bool</type></signal>
+ <signal><property type="string">/sim/model/ground-services/f-connect-r</property><type>bool</type></signal>
+
+ <signal><property type="string">/engines/engine[0]/starter</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[0]/running</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[0]/n1</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[0]/n2</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[1]/starter</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[1]/running</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[1]/n1</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[1]/n2</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[2]/starter</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[2]/running</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[2]/n1</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[2]/n2</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[3]/starter</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[3]/running</property><type>bool</type></signal>
+ <signal><property type="string">/engines/engine[3]/n1</property><type>double</type></signal>
+ <signal><property type="string">/engines/engine[3]/n2</property><type>double</type></signal>
+
+
+ <signal><property type="string">/tu154/contrail/condensation</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/contrail1</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/contrail2</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/contrail3</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/smoke1</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/smoke2</property><type>double</type></signal>
+ <signal><property type="string">/tu154/contrail/smoke3</property><type>double</type></signal>
+
+ <signal><property type="string">/tu154/cp-gauge-scale-10</property><type>unspecified</type></signal>
+ <signal><property type="string">/tu154/cp-gauge-scale-20</property><type>unspecified</type></signal>
+
+ <signal><property type="string">/tu154/door/cargo0</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/cargo1</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/passe</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/refuel</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/window-left</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/window-left-sec</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/window-right</property><type>double</type></signal>
+ <signal><property type="string">/tu154/door/window-right-sec</property><type>double</type></signal>
+
+ <signal><property type="string">/tu154/light/retract</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/headlight</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/headlight-selector</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/cabin/blue</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/cabin/green</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/cabin/red</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-blue</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-blue-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-green</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-green-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-red</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/instruments/int-red-def</property><type>double</type></signal>
+
+ <signal><property type="string">/tu154/light/nav/blue</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/nav/green</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/nav/red</property><type>double</type></signal>
+
+ <signal><property type="string">/tu154/light/panel/amb-blue</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/amb-blue-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/amb-green</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/amb-green-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/amb-red</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/amb-red-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-blue</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-blue-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-green</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-green-def</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-red</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/panel/ext-red-def</property><type>double</type></signal>
+ <!--<signal><property type="string">/tu154/light/strobe/enabled</property><type>bool</type></signal>
+ <signal><property type="string">/tu154/light/strobe/state</property><type>bool</type></signal>
+ <signal><property type="string">/tu154/light/strobe/strobe_1</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/strobe/strobe_2</property><type>double</type></signal>
+ <signal><property type="string">/tu154/light/strobe/strobe_selector</property><type>double</type></signal>-->
+
+ <signal><property type="string">/tu154/switches/bano</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/omi</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/gauge-light</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/fasten-seat-belts</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/no-smoking</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/exit</property><type>double</type></signal>
+ <signal><property type="string">/tu154/switches/main-battery</property><type>double</type></signal>
+
+
+ <signal><property type="string">/tu154/ena-adj</property><type>unspecified</type></signal>
+
+ <signal><property type="string">/tu154/fan/rpm1</property><type>double</type></signal>
+ <signal><property type="string">/tu154/fan/rpm2</property><type>double</type></signal>
+ <signal><property type="string">/tu154/fan/rpm3</property><type>double</type></signal>
+
+ <signal><property type="string">/gear/gear[0]/rollspeed-ms</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[0]/position-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[0]/compression-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[0]/steering-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[0]/tyre-smoke</property><type>int</type></signal>
+ <signal><property type="string">/gear/gear[0]/wow</property><type>float</type></signal>
+ <signal><property type="string">/fdm/jsbsim/gear/steer-pos-deg</property><type>double</type></signal>
+ <signal><property type="string">/gear/gear[1]/rollspeed-ms</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[1]/position-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[1]/compression-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[1]/tyre-smoke</property><type>int</type></signal>
+ <signal><property type="string">/gear/gear[1]/wow</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[2]/rollspeed-ms</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[2]/position-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[2]/compression-norm</property><type>float</type></signal>
+ <signal><property type="string">/gear/gear[2]/tyre-smoke</property><type>int</type></signal>
+ <signal><property type="string">/gear/gear[2]/wow</property><type>float</type></signal>
+
+ <signal><property type="string">/velocities/groundspeed-kt</property><type>float</type></signal>
+
+ <!--<signal><property type="string">/sim/sound/internal</property><type>float</type></signal>-->
+
+ <signal><property type="string">/fdm/jsbsim/gear/unit[0]/friction/bumpiness</property><type>float</type></signal>
+ <signal><property type="string">/fdm/jsbsim/gear/unit[1]/friction/bumpiness</property><type>float</type></signal>
+ <signal><property type="string">/fdm/jsbsim/gear/unit[2]/friction/bumpiness</property><type>float</type></signal>
+
+ <signal><property type="string">/tu154/on-yoke</property><type>unspecified</type></signal>
+
+ <signal><property type="string">/tu154/test</property><type>unspecified</type></signal>
+
+ <signal><property type="string">/tu154/volume</property><type>double</type></signal>
+
+ <signal><property type="string">/tu154/systems/APU/APU-damper</property><type>double</type></signal>
+
+ <signal><property type="string">/surface-positions/elevator-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/flap-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/left-aileron-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/right-aileron-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/rudder-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/speedbrake-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/spoilers-pos-norm</property><type>double</type></signal>
+ <signal><property type="string">/surface-positions/wing-fold-pos-norm</property><type>double</type></signal>
+
+
+ <signal><property type="string">/services/catering/position-norm</property><type>double</type></signal>
+ <signal><property type="string">/services/deicing_truck/crane/position-norm</property><type>double</type></signal>
+ <signal><property type="string">/services/deicing_truck/deicing/position-norm</property><type>double</type></signal>
+ <signal><property type="string">/services/deicing_truck/truck/position-norm</property><type>double</type></signal>
+
+
+ <!--<signal><property type="string">/sim/multiplay/generic/int[0]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[1]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[2]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[3]</property><type>int</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[4]</property><type>int</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[5]</property><type>int</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[6]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[7]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[8]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[9]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[10]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[11]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[12]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[13]</property><type>double</type></signal>
+ <signal><property type="string">/sim/multiplay/generic/int[14]</property><type>double</type></signal>-->
+
+
+ <signal><property type="string">/fdm/jsbsim/propulsion/engine[0]/reverser-angle-rad</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/propulsion/engine[2]/reverser-angle-rad</property><type>double</type></signal>
+
+
+ <signal><property type="string">/sim/systems/wingflexer/z-m</property><type>double</type></signal>
+
+
+ <signal><property type="string">/fdm/jsbsim/fuel/sel-refuel-123</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sel-refuel-4</property><type>double</type></signal>
+ <!--<signal><property type="string">/fdm/jsbsim/fuel/sw-refuel</property><type>double</type></signal>-->
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-1</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-2L</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-2R</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-3L</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-3R</property><type>double</type></signal>
+ <signal><property type="string">/fdm/jsbsim/fuel/sw-refuel-4</property><type>double</type></signal>
+ <signal><property type="string">/tu154/refuel/btn-check</property><type>double</type></signal>
+ <signal><property type="string">/tu154/refuel/sw-light</property><type>double</type></signal>
+
+
+</PropertyList>

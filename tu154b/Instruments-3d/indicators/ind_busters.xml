@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2009 by Yurik V. Nikiforoff - port for FGFS,  FDM,		   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- "Busters" indicators on FE panel
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>busters.ac</path>
+<!--External panel lighting-->
+<animation>
+  <type>material</type>
+  <object-name>cover</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+  </emission>
+</animation>
+<!--Indicators-->
+<animation>
+  <type>select</type>
+  <object-name>text</object-name>
+  <condition>
+    <greater-than>
+      <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+      <value>10</value>
+    </greater-than>
+  </condition>
+</animation>
+<animation>
+  <type>select</type>
+  <object-name>text_back</object-name>
+  <condition>
+    <less-than>
+      <property>/tu154/systems/electrical/buses/DC27-bus-Lv/volts</property>
+      <value>10</value>
+    </less-than>
+  </condition>
+</animation>
+<animation>
+  <type>material</type>
+  <object-name>text</object-name>
+  <emission>
+    <red>1.0</red>
+    <green>1.0</green>
+    <blue>1.0</blue>
+    <factor-prop>tu154/switches/busters-cover</factor-prop>
+  </emission>
+</animation>
+
+
+
+</PropertyList>

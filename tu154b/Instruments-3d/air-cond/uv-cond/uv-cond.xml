@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <path>uv-cond.ac</path>
+ <params>
+  <param1/>
+  <param2/>
+ </params>
+
+ <!--<effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>base</object-name>
+    <object-name>needle_1</object-name>
+    <object-name>needle_2</object-name>
+ </effect>-->
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle_1</object-name>
+  <object-name>needle_2</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+  </emission>
+</animation>
+
+
+<!--Needles-->
+
+<animation>
+    <type>rotate</type>
+    <object-name>needle_1</object-name>
+    <property alias="../../params/param1"/>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-137.5</dep></entry>
+      <entry><ind>  500.0</ind> <dep> -108.75</dep></entry>
+      <entry><ind>  1000.0</ind> <dep> -80.5</dep></entry>
+      <entry><ind>  1500.0</ind> <dep> -52.25</dep></entry>
+      <entry><ind>  2000.0</ind> <dep> -24.25</dep></entry>
+      <entry><ind>  2500.0</ind> <dep> 5.0</dep></entry>
+      <entry><ind>  3000.0</ind> <dep> 33.0</dep></entry>
+      <entry><ind>  3500.0</ind> <dep> 63.0</dep></entry>
+      <entry><ind>  4000.0</ind> <dep> 89.5</dep></entry>
+      <entry><ind>  4500.0</ind> <dep> 115.5</dep></entry>
+      <entry><ind>	5000.0</ind>	<dep>	141.5</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle_2</object-name>
+  <property alias="../../params/param2"/>
+  <interpolation>
+    <entry><ind>  -0.06</ind> <dep> -40.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	-59.0</dep></entry>
+    <entry><ind>  0.1</ind> <dep> -88.5</dep></entry>
+    <entry><ind>  0.2</ind> <dep> -118.0</dep></entry>
+    <entry><ind>  0.3</ind> <dep> -151.0</dep></entry>
+    <entry><ind>  0.4</ind> <dep> -187.5</dep></entry>
+    <entry><ind>  0.5</ind> <dep> -226.0</dep></entry>
+    <entry><ind>  0.6</ind> <dep> -257.0</dep></entry>
+    <entry><ind>  0.7</ind> <dep> -286.5</dep></entry>
+    <entry><ind>  0.8</ind> <dep> -317.5</dep></entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+
+</PropertyList>

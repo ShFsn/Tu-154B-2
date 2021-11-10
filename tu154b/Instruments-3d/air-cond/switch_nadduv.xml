@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- AZS type 3
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>switch_nadduv.ac</path>
+<!--External panel lighting-->
+<animation>
+  <type>material</type>
+  <object-name>handle1</object-name>
+  <object-name>handle2</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+  </emission>
+</animation>
+
+  
+<animation>
+  <type>rotate</type>
+  <object-name>handle1</object-name>
+  <property>tu154/air-cond/sw/sw-nadduv</property>  
+  <interpolation>
+    <entry><ind>	-1.0</ind>	<dep>	-60.0</dep></entry>
+    <entry><ind>	0.0</ind>	<dep>	0.0</dep></entry>
+    <entry><ind>	1.0</ind>	<dep>	60.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>  
+<animation>
+  <type>rotate</type>
+  <object-name>handle2</object-name>
+  <property>tu154/air-cond/sw/sw-nadduv</property>  
+  <interpolation>
+    <entry><ind>  -1.0</ind>  <dep> -60.0</dep></entry>
+    <entry><ind>  0.0</ind> <dep> 0.0</dep></entry>
+    <entry><ind>  1.0</ind> <dep> 60.0</dep></entry>
+  </interpolation>
+  <axis>
+    <x>0.0</x>
+    <y>-1.0</y>
+    <z>0.0</z>
+  </axis>
+</animation>
+
+<!--Control-->
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_1</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <value>1</value>
+      <time>0.1</time>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-interpolate</command>
+        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </mod-up>
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_2</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <value>0</value>
+      <time>0.1</time>
+    </binding>
+    <!--<mod-up>
+      <binding>
+        <command>property-interpolate</command>
+        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </mod-up>-->
+  </action>
+</animation>
+<animation>
+  <type>pick</type>
+  <object-name>hotspot_3</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-interpolate</command>
+      <property>tu154/air-cond/sw/sw-nadduv</property>
+      <value>-1</value>
+      <time>0.1</time>
+    </binding>
+    <!--<mod-up>
+      <binding>
+        <command>property-interpolate</command>
+        <property>tu154/air-cond/sw/sw-nadduv</property>
+        <value>0</value>
+        <time>0.1</time>
+      </binding>
+    </mod-up>-->
+  </action>
+</animation>
+
+
+
+</PropertyList>

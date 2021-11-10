@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2007 by Yurik V. Nikiforoff - port for FGFS,  FDM, 	  	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- Fuel meter US3T-5T
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>us3t-5t.ac</path>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle_s</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+  </emission>
+</animation>
+<!--External panel lighting-->
+<animation>
+  <type>material</type>
+  <object-name>cover</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/vnesh</red-prop>
+    <green-prop>sim/model/cabin-lighting/vnesh</green-prop>
+    <blue-prop>sim/model/cabin-lighting/vnesh</blue-prop>
+  </emission>
+</animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle_s</object-name>
+    <property>tu154/systems/fuel/rest-kg</property>
+    <interpolation>
+      <entry><ind>	0.0</ind>	<dep>	-161.0</dep></entry>
+      <entry><ind>	50000.0</ind>	<dep>	163.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+<!--Control-->
+<animation>
+  <type>pick</type>
+  <object-name>hs1</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>fuel.cons_meter_adjust(-1);</script>  
+      </binding>      
+  </action>
+</animation>
+
+<animation>
+  <type>pick</type>
+  <object-name>hs2</object-name>
+  <visible>false</visible>
+  <action>
+    <button>0</button>
+    <repeatable>true</repeatable>
+    <binding>
+      <command>nasal</command>
+      <script>fuel.cons_meter_adjust(1);</script>  
+    </binding>      
+  </action>
+</animation>
+
+
+</PropertyList>

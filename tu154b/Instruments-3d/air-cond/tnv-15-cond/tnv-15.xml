@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+    #############################################################################
+    #    (C) 2006 by Yurik V. Nikiforoff - port for FGFS,  FDM,   	#
+    #	2d & 3d instruments, animations, systems and over.		   	#
+    #    	yurik@megasignal.com					   	#
+    #############################################################################	  
+    -->
+
+<!-- TNV-15 termometer for Flight Engineer panel
+3D instrument for Tu-154 -->
+<PropertyList>
+ <path>tnv-15.ac</path>
+<params>
+  <param/>
+</params>
+<!-- Internal instruments lighting -->
+<animation>
+  <type>material</type>
+  <object-name>base</object-name>
+  <object-name>needle</object-name>
+  <emission>
+    <red-prop>sim/model/cabin-lighting/prib</red-prop>
+    <green-prop>sim/model/cabin-lighting/prib</green-prop>
+    <blue-prop>sim/model/cabin-lighting/prib-2</blue-prop>
+  </emission>
+</animation>
+
+  
+<!--Needles-->
+<animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property alias="../../params/param"/>
+    <interpolation>
+      <entry><ind>	-60.0</ind>	<dep>	-106.0</dep></entry>
+      <entry><ind>  -30.0</ind> <dep> -45.0</dep></entry>
+      <entry><ind>  -20.0</ind> <dep> -28.0</dep></entry>
+      <entry><ind>  0.0</ind> <dep> 1.0</dep></entry>
+      <entry><ind>  20.0</ind> <dep> 30.0</dep></entry>
+      <entry><ind>  30.0</ind> <dep> 48.0</dep></entry>
+      <entry><ind>  50.0</ind> <dep> 81.0</dep></entry>
+      <entry><ind>	70.0</ind>	<dep>	 105.0</dep></entry>
+    </interpolation>
+    <axis>
+      <x>-1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+</animation>
+
+</PropertyList>

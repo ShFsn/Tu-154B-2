@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <name>preferences</name>
+  <layout>vbox</layout>
+
+  <nasal>
+    <open>
+      deicing_anim = func{
+        setprop("/sim/model/ground-services/de-ice-p", 0);
+        setprop("/sim/model/ground-services/de-ice-pp", 0);
+        interpolate ("/sim/model/ground-services/de-ice-pp", 90, 90);
+      }
+    </open>
+
+    <close>
+      <!-- Leave this empty or fix close/open on fork toggle first. -->
+    </close>
+  </nasal>
+
+  <group>
+    <layout>hbox</layout>
+    <text>
+      <halign>left</halign>
+      <label>Tu-154B-2 Preferences</label>
+    </text>
+
+    <empty>
+      <stretch>true</stretch>
+    </empty>
+
+    <button>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <legend/>
+      <pref-width>16</pref-width>
+      <pref-height>16</pref-height>
+      <border>2</border>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+      <key>Esc</key>
+    </button>
+  </group>
+
+  <hrule/>
+
+
+
+  <group>
+    <stretch>true</stretch>
+    <layout>vbox</layout>
+    <halign>center</halign>
+    <valign>top</valign>
+
+
+
+    <!--<group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>APU Exhaust</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Like on original Tu-154</label>
+      <property>/sim/model/apu-style/apu-type</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>-->
+
+
+
+    <!--<group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>External Sounds</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Loud External Sounds Volume</label>
+      <property>/sim/sound/loud-ext</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>-->
+
+
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Replay</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Save state after replay</label>
+      <property>/sim/model/replay-fix/save_state</property>
+      <live>true</live>
+      <binding><command>dialog-apply</command></binding>
+    </checkbox>
+
+    <group><layout>hbox</layout>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+      <text><label>Air Conditioning</label></text>
+      <hrule>
+        <stretch type="bool">true</stretch>
+      </hrule>
+    </group>
+    <checkbox>
+      <halign>left</halign>
+      <label>Synchronize zero-height cabin pressure with main altimeters pressure</label>
+      <property>/tu154/air-cond/pressure-sync</property>
+      <live>true</live>
+      <!--<binding><command>dialog-apply</command></binding>-->
+    </checkbox>
+
+  </group> 
+
+</PropertyList> 
